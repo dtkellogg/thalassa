@@ -1,0 +1,42 @@
+.watersports {
+  margin-top: 6rem;
+  &__content {
+    padding: 1.5rem 3rem;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  &__text-box {
+    grid-column: 2 / span 4;
+    padding: 3rem;
+    justify-items: start;
+
+    display: grid;
+  }
+
+  &__logo {
+    grid-column: 7 / span 1;
+    height: 40%;
+    width: 70%;
+    z-index: 3;
+
+    align-self: center;
+    justify-self: center;
+
+    // grid-column: 6 / span 2;
+  }
+
+  &__box {
+    grid-column: 7 / span 1;
+    height: 20rem;
+    width: 20rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+  }
+}

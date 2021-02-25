@@ -1,0 +1,123 @@
+// .pre-footer-space {
+//   background-color: $color-tertiary;
+// }
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.75fr 1fr 0.75fr;
+
+  &__nav {
+    list-style: none;
+    margin: 2rem 1rem;
+  }
+
+  &__nav--1 {
+  }
+
+  &__nav--2 {
+  }
+
+  &__nav--3 {
+  }
+
+  &__nav--4 {
+  }
+
+  &__nav--item {
+    margin: 0 2rem 1rem 2rem;
+  }
+
+  &__nav--link {
+  }
+
+  &__location {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    justify-self: start;
+    align-self: center;
+    margin-left: 3rem;
+    padding-right: 10rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &--address {
+    }
+
+    &--email {
+    }
+  }
+
+  &__email {
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 2;
+    justify-self: start;
+    align-self: center;
+    margin-left: 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &--form {
+      width: 32rem;
+      margin: 1rem 0;
+    }
+
+    &--input {
+      border: none;
+      padding: 0.7em 2rem;
+      border-radius: 100px;
+      width: 100%;
+      margin-bottom: 0.25rem;
+      background-color: $color-grey-light-2;
+    }
+  }
+
+  &__bottom {
+    grid-row: 3 / span 1;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: space-between;
+  }
+
+  &__logo {
+    height: 7rem;
+    width: 12rem;
+    // margin-left: 3rem;
+    filter: brightness(0) invert(1);
+    grid-column: 1 / span 1;
+    justify-self: center;
+  }
+
+  &__social-media {
+    grid-column: 2 / span 2;
+  }
+
+  &__social-links {
+    list-style: none;
+    // grid-column: 3 / span 3;
+
+    display: flex;
+    justify-content: center;
+
+    * {
+      &:visited,
+      &:link {
+        text-decoration: none;
+        color: $color-primary;
+        margin: 0 2rem;
+        // height: 10rem;
+        // width: 2rem;
+        font-size: 250%;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-grey-dark-1;
+      }
+    }
+  }
+}

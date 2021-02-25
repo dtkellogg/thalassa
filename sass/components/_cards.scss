@@ -1,0 +1,26 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 4rem;
+  background-color: $color-white;
+  margin: 6rem 0 5rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-grey-light-2;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
+  transition: all 0.35s;
+
+  &__img {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
+  }
+}

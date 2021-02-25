@@ -1,0 +1,43 @@
+/*
+font-family: 
+font-size: 16px;
+line-height: 28px;
+--ang_color_heading: #2a4365;
+*/
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  //   max-width: 140rem;
+  margin: 4rem 15rem; // trick to center
+  background-color: $color-white;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.4);
+  min-height: min-content;
+
+  display: grid;
+  grid-template-rows: 7rem 86.5vh 9.5vh repeat(4, min-content) 4.5vh min-content;
+  grid-template-columns:
+    [sidebar-start] 18% [sidebar-end full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end]
+    1fr [full-end]; // 1140/ 8 = 14rem
+  grid-gap: none;
+
+  //   align-content: space-between;
+}

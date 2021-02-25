@@ -1,0 +1,40 @@
+.overview {
+  border-bottom: 1px solid $color-grey-light-2;
+
+  &__stars {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: $color-primary;
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating {
+    background-color: $color-primary;
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-average {
+      margin-bottom: -3px;
+    }
+  }
+}
