@@ -75,6 +75,10 @@
   &:active {
     transform: translateY(-3.1rem);
   }
+
+  @media (max-width: 800px) {
+    width: 20rem;
+  }
 }
 
 .details__btn {

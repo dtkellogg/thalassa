@@ -5,12 +5,26 @@
   grid-gap: 4rem;
   background-color: $color-white;
   margin: 6rem 0 5rem 0;
+
+  @media (max-width: 800px) {
+    grid-gap: 3rem;
+    padding: 1rem;
+  }
+
+  @media (max-width: 650px) {
+    grid-gap: 2rem;
+  }
+
+  @media (max-width: 550px) {
+    grid-gap: 1rem;
+  }
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: $color-grey-light-2;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
   transition: all 0.35s;
