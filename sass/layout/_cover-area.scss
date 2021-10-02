@@ -6,9 +6,7 @@
     ),
     url(../../img/hero.jpg);
   background-size: cover;
-  background-position: top;
   overflow: hidden;
-  // position: relative;
 
   display: flex;
   flex-direction: column;
@@ -26,5 +24,15 @@
     width: 14rem;
     margin-top: 2.5rem;
     filter: brightness(0) invert(1);
+  }
+
+  background-position: center;
+  background-color: $color-grey-light-2;
+  grid-column: full-start / full-end;
+  grid-row: 2 / 3;
+
+  @media (max-width: 800px) {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
   }
 }

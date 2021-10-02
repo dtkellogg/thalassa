@@ -9,69 +9,82 @@
   align-items: center;
 }
 
-.sidebar {
-  grid-column: sidebar-start / sidebar-end;
-  grid-row: 2 / -1;
-  font-size: 1.4rem;
-  list-style: none;
-  background-color: $color-grey-dark-1;
-  //   margin-top: 3.5rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.cover-area {
-  background-size: cover;
-  overflow-y: hidden;
-  background-position: center;
-  background-color: $color-grey-light-2;
-  grid-column: full-start / full-end;
-  grid-row: 2 / 3;
-}
-
 .overview {
   grid-column: full-start / full-end;
   grid-row: 3 / 4;
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 800px) {
+    grid-row: 4 / 5;
+    grid-column: sidebar-start / full-end;
+  }
 }
 
 .details {
   grid-column: col-start 1 / col-end 8;
   grid-row: 4 / 5;
+
+  @media (max-width: 800px) {
+    grid-row: 5 / 6;
+    grid-column: sidebar-start / full-end;
+  }
 }
 
 .cards {
   background-color: $color-grey-light-1;
   grid-column: col-start 2 / col-end 7;
   grid-row: 5 / 6;
+
+  @media (max-width: 800px) {
+    grid-row: 6 / 7;
+    grid-column: sidebar-start / full-end;
+  }
 }
 
 .gallery {
   background-color: #fff;
   grid-column: full-start / full-end;
   grid-row: 6 / 7;
+
+  @media (max-width: 800px) {
+    grid-row: 7 / 8;
+    grid-column: sidebar-start / full-end;
+  }
 }
 
 .watersports {
   background-color: $color-grey-light-2;
   grid-column: full-start / full-end;
   grid-row: 7 / 8;
+
+  @media (max-width: 800px) {
+    grid-row: 8 / 9;
+    grid-column: sidebar-start / full-end;
+  }
 }
 
 .pre-footer-space {
   background-color: $color-tertiary;
   grid-column: full-start / full-end;
   grid-row: 8 / 9;
+
+  @media (max-width: 800px) {
+    grid-row: 9 / 10;
+    grid-column: sidebar-start / full-end;
+  }
 }
 
 .footer {
   background-color: $color-quatinary;
   grid-column: full-start / full-end;
   grid-row: 9 / 10;
+
+  @media (max-width: 800px) {
+    grid-row: 10 / 11;
+    grid-column: sidebar-start / full-end;
+  }
 }
 
 // .popup {

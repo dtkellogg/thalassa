@@ -1,0 +1,23 @@
+.container {
+  margin: 4rem 15rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.4);
+  min-height: min-content;
+  display: grid;
+  grid-template-rows: 7rem 86.5vh 9.5vh repeat(4, min-content) 4.5vh min-content;
+  grid-template-columns: [sidebar-start] minmax(15rem, 18%) [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+  grid-gap: none; 
+//   width: 100%;
+
+  @media (max-width: 1725px) {
+    margin: 4rem 8rem;
+  }
+
+  @media (max-width: 1600px) {
+    margin: 0;
+  }
+
+  @media (max-width: 800px) {
+    grid-template-rows: 7rem 7rem 86.5vh 9.5vh repeat(4, min-content) 4.5vh min-content;
+  }
+}
