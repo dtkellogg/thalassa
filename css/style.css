@@ -240,8 +240,8 @@ body {
     filter: brightness(0) invert(1); }
   @media (max-width: 800px) {
     .cover-area {
-      grid-row: 3 / 4;
-      grid-column: 1 / -1; } }
+      grid-column: 1 / -1;
+      grid-row: 2 / 4; } }
 
 .footer {
   display: grid;
@@ -379,11 +379,15 @@ body {
   @media (max-width: 800px) {
     .sidebar {
       grid-column: sidebar-start / full-end;
-      grid-row: 2 / span 1; } }
+      grid-row: -1 / span 1;
+      background-color: #0d5184; } }
 
 .side-nav {
   list-style: none;
   margin-top: 2rem; }
+  @media (max-width: 800px) {
+    .side-nav {
+      display: none; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
