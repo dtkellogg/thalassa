@@ -500,12 +500,20 @@ body {
   .details__text {
     grid-column: 1 / span 2;
     width: 100%; }
+    @media (max-width: 800px) {
+      .details__text {
+        grid-column: 1 / -1; } }
   .details__btns {
     grid-column: 3 / span 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end; }
+    @media (max-width: 800px) {
+      .details__btns {
+        grid-row: 2 / span 1;
+        grid-column: 1 / -1;
+        align-items: center; } }
   .details__icon-location {
     height: 1.75rem;
     width: 1.75rem;
@@ -929,7 +937,8 @@ ion-icon[name="logo-instagram"]:hover {
   @media (max-width: 800px) {
     .details {
       grid-row: 5 / 6;
-      grid-column: sidebar-start / full-end; } }
+      grid-column: sidebar-start / full-end;
+      grid-template-rows: 1.75fr 1fr; } }
 
 .cards {
   background-color: #faf9f9;
@@ -947,7 +956,8 @@ ion-icon[name="logo-instagram"]:hover {
   @media (max-width: 800px) {
     .gallery {
       grid-row: 7 / 8;
-      grid-column: sidebar-start / full-end; } }
+      grid-column: sidebar-start / full-end;
+      margin: 2rem 0 0rem 0; } }
 
 .watersports {
   background-color: #f4f2f2;
