@@ -36,10 +36,6 @@
       width: 100%;
       background-color: $color-grey-light-3;
     }
-
-    @media (max-width: 550px) {
-      margin-right: 0;
-    }
   }
 
   &__input:focus + &__button {
