@@ -42,6 +42,9 @@ body {
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: 400; }
+  @media (max-width: 600px) {
+    .user-nav__user-name {
+      display: none; } }
 
 .side-nav {
   font-size: 1.4rem;
@@ -86,6 +89,9 @@ body {
     .overview__heading {
       font-size: 2.0rem;
       padding: 1.0rem 2rem 0.25rem 2rem; } }
+  @media (max-width: 440px) {
+    .overview__heading {
+      display: none; } }
 
 .overview__location {
   font-size: 1.2rem; }
@@ -225,11 +231,42 @@ body {
   @media (max-width: 860px) {
     .footer {
       grid-template-rows: 0.75fr 1fr 1fr 0.75fr; } }
+  @media (max-width: 475px) {
+    .footer {
+      grid-template-rows: 0.75fr 0.75fr 1fr 1fr 0.75fr; } }
   .footer__nav {
     list-style: none;
     margin: 2rem 1rem; }
-  .footer__nav--item {
-    margin: 0 2rem 1rem 2rem; }
+    @media (max-width: 550px) {
+      .footer__nav {
+        margin: 2rem 0.5rem; } }
+    @media (max-width: 550px) {
+      .footer__nav {
+        margin: 2rem 0.5rem; } }
+    @media (max-width: 475px) {
+      .footer__nav--1 {
+        grid-column: 1 / span 2;
+        align-self: center;
+        justify-self: start; } }
+    @media (max-width: 475px) {
+      .footer__nav--2 {
+        grid-column: 3 / span 2;
+        align-self: center;
+        justify-self: start; } }
+    @media (max-width: 475px) {
+      .footer__nav--3 {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        align-self: center;
+        justify-self: start; } }
+    @media (max-width: 475px) {
+      .footer__nav--4 {
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 1;
+        align-self: center;
+        justify-self: start; } }
+    .footer__nav--item {
+      margin: 0 2rem 1rem 2rem; }
   .footer__location {
     grid-row: 2 / span 1;
     grid-column: 1 / span 2;
@@ -245,6 +282,9 @@ body {
         justify-self: center;
         margin: 0;
         padding: 0; } }
+    @media (max-width: 475px) {
+      .footer__location {
+        grid-row: 3 / span 1; } }
   .footer__email {
     grid-row: 2 / span 1;
     grid-column: 3 / span 2;
@@ -253,6 +293,15 @@ body {
     margin-left: 3rem;
     display: flex;
     flex-direction: column; }
+    @media (max-width: 860px) {
+      .footer__email {
+        grid-row: 3 / span 1;
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin-left: 0; } }
+    @media (max-width: 475px) {
+      .footer__email {
+        grid-row: 4 / span 1; } }
     .footer__email--form {
       width: 32rem;
       margin: 1rem 0; }
@@ -263,12 +312,6 @@ body {
       width: 100%;
       margin-bottom: 0.25rem;
       background-color: #f4f2f2; }
-    @media (max-width: 860px) {
-      .footer__email {
-        grid-row: 3 / span 1;
-        grid-column: 1 / -1;
-        justify-self: center;
-        margin-left: 0; } }
   .footer__bottom {
     grid-row: 3 / span 1;
     grid-column: 1 / -1;
@@ -279,6 +322,12 @@ body {
     @media (max-width: 860px) {
       .footer__bottom {
         grid-row: 4 / span 1; } }
+    @media (max-width: 475px) {
+      .footer__bottom {
+        grid-row: 5 / span 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; } }
   .footer__logo {
     height: 7rem;
     width: 12rem;
@@ -365,6 +414,9 @@ body {
 .logo {
   height: 3.5rem;
   margin-left: 3rem; }
+  @media (max-width: 600px) {
+    .logo {
+      margin-left: 1.5rem; } }
 
 .search {
   flex: 0 0 40%;
@@ -417,6 +469,9 @@ body {
     width: auto; }
   .user-nav__icon-box {
     position: relative; }
+    @media (max-width: 550px) {
+      .user-nav__icon-box {
+        display: none; } }
   .user-nav__notification {
     font-size: 1.2rem;
     height: 1.75rem;
@@ -761,6 +816,9 @@ ion-icon[name="logo-instagram"]:hover {
   .overview__stars {
     display: flex;
     margin-right: auto; }
+    @media (max-width: 440px) {
+      .overview__stars {
+        margin: 0 2rem; } }
   .overview__icon-star, .overview__icon-location {
     height: 1.75rem;
     width: 1.75rem;
@@ -789,18 +847,39 @@ ion-icon[name="logo-instagram"]:hover {
     position: relative;
     display: grid;
     grid-template-columns: repeat(8, 1fr); }
+    @media (max-width: 750px) {
+      .watersports__content {
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10rem; } }
   .watersports__text-box {
     grid-column: 2 / span 4;
     padding: 3rem;
     justify-items: start;
     display: grid; }
+    @media (max-width: 1050px) {
+      .watersports__text-box {
+        padding: 1rem 2rem;
+        grid-column: 1 / span 5; } }
   .watersports__logo {
     grid-column: 7 / span 1;
-    height: 40%;
-    width: 70%;
+    height: 15rem;
+    width: auto;
     z-index: 3;
+    z-index: 100;
     align-self: center;
     justify-self: center; }
+    @media (max-width: 1050px) {
+      .watersports__logo {
+        grid-column: 7 / span 2; } }
+    @media (max-width: 750px) {
+      .watersports__logo {
+        bottom: -2rem; } }
+    @media (max-width: 700px) {
+      .watersports__logo {
+        height: 10rem;
+        width: auto; } }
   .watersports__box {
     grid-column: 7 / span 1;
     height: 20rem;
@@ -810,7 +889,18 @@ ion-icon[name="logo-instagram"]:hover {
     position: absolute;
     align-self: center;
     justify-self: center;
-    z-index: 1; }
+    z-index: 1;
+    z-index: 99; }
+    @media (max-width: 1050px) {
+      .watersports__box {
+        grid-column: 7 / span 2; } }
+    @media (max-width: 750px) {
+      .watersports__box {
+        bottom: -2rem; } }
+    @media (max-width: 700px) {
+      .watersports__box {
+        height: 15rem;
+        width: 15rem; } }
 
 .header {
   border-bottom: 1px solid #f4f2f2;
@@ -829,6 +919,9 @@ ion-icon[name="logo-instagram"]:hover {
     .overview {
       grid-row: 4 / 5;
       grid-column: sidebar-start / full-end; } }
+  @media (max-width: 440px) {
+    .overview {
+      justify-content: space-between; } }
 
 .details {
   grid-column: col-start 1 / col-end 8;

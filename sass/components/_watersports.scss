@@ -1,11 +1,19 @@
 .watersports {
   margin-top: 6rem;
+
   &__content {
     padding: 1.5rem 3rem;
     position: relative;
 
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+
+    @media (max-width: 750px) {
+      padding: 0.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10rem;
+    }
   }
 
   &__text-box {
@@ -14,18 +22,38 @@
     justify-items: start;
 
     display: grid;
+
+    @media (max-width: 1050px) {
+      padding: 1rem 2rem;
+      grid-column: 1 / span 5;
+    }
   }
 
   &__logo {
     grid-column: 7 / span 1;
-    height: 40%;
-    width: 70%;
+    height: 15rem;
+    width: auto;
     z-index: 3;
+    z-index: 100;
+
+    // position: absolute;
+    // right: 2rem;
 
     align-self: center;
     justify-self: center;
 
-    // grid-column: 6 / span 2;
+    @media (max-width: 1050px) {
+      grid-column: 7 / span 2;
+    }
+
+    @media (max-width: 750px) {
+      bottom: -2rem;
+    }
+
+    @media (max-width: 700px) {
+      height: 10rem;
+      width: auto;
+    }
   }
 
   &__box {
@@ -38,5 +66,21 @@
     align-self: center;
     justify-self: center;
     z-index: 1;
+    z-index: 99;
+
+
+    @media (max-width: 1050px) {
+      grid-column: 7 / span 2;
+    }
+
+    @media (max-width: 750px) {
+      bottom: -2rem;
+    }
+
+    @media (max-width: 700px) {
+      height: 15rem;
+      width: 15rem;
+    }
   }
+  
 }

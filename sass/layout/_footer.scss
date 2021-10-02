@@ -11,29 +11,64 @@
     grid-template-rows: 0.75fr 1fr 1fr 0.75fr;
   }
 
+  @media (max-width: 475px) {
+    grid-template-rows: 0.75fr 0.75fr 1fr 1fr 0.75fr;
+  }
+
   &__nav {
     list-style: none;
     margin: 2rem 1rem;
+
+    @media (max-width: 550px) {
+      margin: 2rem 0.5rem;
+    }
+
+    @media (max-width: 550px) {
+      margin: 2rem 0.5rem;
+    }
+
+    &--1 {
+      @media (max-width: 475px) {
+        grid-column: 1 / span 2;
+        align-self: center;
+        justify-self: start;
+      }
+    }
+
+    &--2 {
+      @media (max-width: 475px) {
+        grid-column: 3 / span 2;
+        align-self: center;
+        justify-self: start;
+      }
+    }
+
+    &--3 {
+      @media (max-width: 475px) {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        align-self: center;
+        justify-self: start;
+      }
+    }
+
+    &--4 {
+      @media (max-width: 475px) {
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 1;
+        align-self: center;
+        justify-self: start;
+      }
+    }
+
+    &--item {
+      margin: 0 2rem 1rem 2rem;
+    }
+
+    &--link {
+    }
   }
 
-  &__nav--1 {
-  }
-
-  &__nav--2 {
-  }
-
-  &__nav--3 {
-  }
-
-  &__nav--4 {
-  }
-
-  &__nav--item {
-    margin: 0 2rem 1rem 2rem;
-  }
-
-  &__nav--link {
-  }
 
   &__location {
     grid-row: 2 / span 1;
@@ -46,17 +81,21 @@
     display: flex;
     flex-direction: column;
 
-    &--address {
-    }
-
-    &--email {
-    }
-
     @media (max-width: 860px) {
       grid-column: 1 / -1;
       justify-self: center;
       margin: 0;
       padding: 0;
+    }
+
+    @media (max-width: 475px) {
+      grid-row: 3 / span 1;
+    }
+
+    &--address {
+    }
+
+    &--email {
     }
   }
 
@@ -69,6 +108,17 @@
 
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 860px) {
+      grid-row: 3 / span 1;
+      grid-column: 1 / -1;
+      justify-self: center;
+      margin-left: 0;
+    }
+
+    @media (max-width: 475px) {
+      grid-row: 4 / span 1;
+    }
 
     &--form {
       width: 32rem;
@@ -83,13 +133,6 @@
       margin-bottom: 0.25rem;
       background-color: $color-grey-light-2;
     }
-
-    @media (max-width: 860px) {
-      grid-row: 3 / span 1;
-      grid-column: 1 / -1;
-      justify-self: center;
-      margin-left: 0;
-    }
   }
 
   &__bottom {
@@ -102,6 +145,13 @@
 
     @media (max-width: 860px) {
       grid-row: 4 / span 1;
+    }
+
+    @media (max-width: 475px) {
+      grid-row: 5 / span 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 

@@ -20,6 +20,10 @@
     grid-row: 4 / 5;
     grid-column: sidebar-start / full-end;
   }
+
+  @media (max-width: 440px) {
+    justify-content: space-between;
+  }
 }
 
 .details {

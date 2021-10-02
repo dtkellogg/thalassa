@@ -4,6 +4,10 @@
   &__stars {
     display: flex;
     margin-right: auto;
+
+    @media (max-width: 440px) {
+      margin: 0 2rem;
+    }
   }
 
   &__icon-star,
